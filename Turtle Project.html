@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hailey Pereira - Project 5 Refactoring</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+          <header>
+            <h1>Refactoring in Python Turtle</h1>
+            <br>
+          </header>
+             
+          <section>
+            <h2>About the Project</h2>
+            <hr>
+            <p>In this project, Python's Turtle is used to create a graphical scene. For this I used the building blocks draw_rectangle, draw_triangle, draw_circle, and draw_oval to create functions that draw composite shapes such as a barn, fence, cow, and more. Compared to drawing each element with the basic shapes, the refactored version made it much easier to draw repeated element with just altering their size. To create my refactored code I made the elements' size in the previous unfactored code the base size for the refactored version. This allows for the elements size to be changed to create duplicates by reducing or enlarging the element by a specified factor, in this code that factor is p. When calling functions reapeatedly, such as draw_tree or draw_cow, I used coords so that I would not have to set new coordinates for each repeated element and instead just change the sizing.</p>
+          </section>
+
+          <section>
+            <h2>Sample Code</h2>
+            <hr>
+            <p>This function uses ovals, circles, rectangles in order to draw a cow. The coords are set so that a cow will draw at the specified coordinates without needing to repeat the function for each location. The variable p is the proportion of the cow's original size the duplicate will take. For a p value of larger than one the cow will be larger than the original by that percent. The opposite is true for a value of less than one, which will cause the cow to be smaller. In this code, a value of .7 for p will create a cow 70% the size of the original.</p>
+            <br>
+               <p><b>turtle:</b> Calls the graphics object for drawing</p>
+                <p><b>start_x:</b> The x value that the function shall begin drawing at</p>
+                <p><b>start_y:</b> The y value that the function shall begin drawing at</p>
+                <p><b>p:</b> the percentage of the original size the object will take in decimal form</p>
+                <div class="Code-Container">
+               <code> <span class="variable">coords</span> <span class="operation">=</span> <span class="bracket">[</span>
+               <span class="bracket">(</span><span class="coord">100</span><span class="bracket">,</span><span class="operation">-</span><span class="coord">170</span><span class="bracket">,</span><span class="coord">1</span><span class="bracket">),</span>
+               <span class="bracket">(</span><span class="coord">195</span><span class="bracket">,</span><span class="operation">-</span><span class="coord">200</span><span class="bracket">,</span><span class="coord">.7</span><span class="bracket">),</span>
+               <span class="bracket">(</span><span class="coord">310</span><span class="bracket">,</span><span class="operation">-</span><span class="coord">210</span><span class="bracket">,</span><span class="coord">.6</span><span class="bracket">),</span>
+             <span class="bracket">]</span>
+             <span class="keyword">for</span> <span class="variable">coord</span> <span class="keyword">in</span> <span class="variable">coords</span><span class="bracket">:</span>
+                  <span class="variable">start_x</span><span class="bracket">,</span><span class="variable">start_y</span><span class="bracket">,</span><span class="variable">p</span> <span class="operation">=</span> <span class="variable">coord</span>
+                  <span class="function">draw_cow</span><span class="bracket">(</span><span class="variable">turtle</span><span class="bracket">,</span><span class="variable">start_x</span><span class="bracket">,</span><span class="variable">start_y</span><span class="bracket">,</span><span class="variable">p</span><span class="bracket">)</span></code></div>
+          </section>
+
+          <section>
+            <h2>Final Scene</h2>
+            <hr>
+            <p>This is the completed turtle scene that features a barn, fence, multiple trees, three cows, and a sun.</p>
+            <br>
+            <img class="final-scene" src="Python-Turtle-Project.png" alt="Refactored Python Scene with a barn, fence, trees, cows, and sun">
+            <br>
+            <p class="final-scene-description">This scene uses multiple composite shapes created from basic turtle functions.The barn is made with a large red rectangle, a black triangle, black lines, and 4 long angled rectangles. The trees consist of brown rectangles and a green circle, all varying sizes. The fences are made using both horizontal an vertical rectangles. The cows are created with multiple sizes of ovals, circles, and a rectangle for the tail. The sun is a circle, and the ground a rectangle.</p>
+          </section>
+            <footer>©2025 Hailey Pereira ｜ Background Image from: <a href="https://www.arbd.com/wp-content/uploads/2018/11/AdobeStock_182210350.jpeg" title="Background Image">https://www.arbd.com/wp-content/uploads/2018/11/AdobeStock_182210350.jpeg</a></footer>
+        </body>
+    </html>
